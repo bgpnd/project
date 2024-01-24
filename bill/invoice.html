@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pandawa Net | Cek Tagihan</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <link rel="icon" href="https://dev.pandawanetwork.com/img/kantor/logo.png" type="image/png">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="https://dev.pandawanetwork.com/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://dev.pandawanetwork.com/assets/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://dev.pandawanetwork.com/assets/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://dev.pandawanetwork.com/assets/dist/css/AdminLTE.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://dev.pandawanetwork.com/assets/plugins/iCheck/square/blue.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="invoice.min.css">
+</head>
+<body class="hold-transition lockscreen">
+  <section class="invoice">
+    <!-- title row -->
+        <h2 class="page-header">
+          <img src="https://dev.pandawanetwork.com/img/kantor/logo.png" alt="logo.png" width="100" height="100">
+          <b>Cek Tagihan Internet Pandawa Net</b>
+        </h2>
+      <!-- /.col -->
+    <!-- info row -->
+    <div class="invoice_left">
+      <div class="invoice-info">
+      <div class="invoice-col">
+        <div class="invoice_title">
+          <b>Data Customer</b>
+          <span>15 Januari 2023</span>
+        </div>
+        <address>
+                  <strong>MARYATA</strong><br>
+         Dsn Sidodadi RT 02 RW 09, Desa Kedawung, Kec Nglegok, Kab Blitar<br>
+         <b>Phone</b>: 081232121875<br>
+         <b>Email</b>: email1@gmail.com1<br>
+         <b>No ID</b>: 349707336
+                </address>
+     </div>
+     <!-- /.col -->
+     <div class="invoice-col">
+            <b>Order ID</b>: 0IFWT3<br>
+      <b>Periode Tagihan</b>: 15 Januari 2023<br>
+      <b>Jatuh Tempo</b>: 15 Januari 2023<br>
+          </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+
+  <!-- Table row -->
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nama Layanan</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Paket Internet 2Mbps</td>
+            <td>Rp. 100.000</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <!-- /.col -->
+  <!-- /.row -->
+    </div class="invoice_right">
+    <div>
+    <!-- accepted payments column -->
+    <form action="https://dev.pandawanetwork.com/pembayaran/tagihan" method="POST" class="form-metode">
+      <input type="hidden" name="_token" value="GlNTu0PuEy0Qhm43AuDQSjIBqovlGLYEMV5RJMxV">      
+       <p class="lead">Metode Pembayaran</p>
+       <input type="hidden" value="081232121875" name="id">
+       <div class="form-group">
+          <button type="submit" class="btn btn-default" name="payment_method" value="MYBVA"><img src="https://tripay.co.id/images/payment-channel/ZT91lrOEad1582929126.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="PERMATAVA"><img src="https://tripay.co.id/images/payment-channel/szezRhAALB1583408731.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="BNIVA"><img src="https://tripay.co.id/images/payment-channel/n22Qsh8jMa1583433577.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="BRIVA"><img src="https://tripay.co.id/images/payment-channel/8WQ3APST5s1579461828.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="MANDIRIVA"><img src="https://tripay.co.id/images/payment-channel/T9Z012UE331583531536.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="BCAVA"><img src="https://tripay.co.id/images/payment-channel/ytBKvaleGy1605201833.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="MUAMALATVA"><img src="https://tripay.co.id/images/payment-channel/GGwwcgdYaG1611929720.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="BSIVA"><img src="https://tripay.co.id/images/payment-channel/tEclz5Assb1643375216.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="INDOMARET"><img src="https://tripay.co.id/images/payment-channel/zNzuO5AuLw1583513974.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="OVO"><img src="https://tripay.co.id/images/payment-channel/fH6Y7wDT171586199243.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="QRISC"><img src="https://tripay.co.id/images/payment-channel/m9FtFwaBCg1623157494.png" height="32px" width="65" alt="Visa"></button>
+          <button type="submit" class="btn btn-default" name="payment_method" value="SHOPEEPAY"><img src="https://tripay.co.id/images/payment-channel/d204uajhlS1655719774.png" height="32px" width="65" alt="Visa"></button>
+        </div>
+  </form>
+<!-- /.row -->
+
+<!-- this row will not appear when printing -->
+<div class="no-print">
+    <a href="https://dev.pandawanetwork.com/cek-tagihan" class="btn btn--primary" style="margin-right: 5px;"> Kembali</a>
+  </div>
+</div>
+</section>
+
+<!-- jQuery 3 -->
+<script src="https://dev.pandawanetwork.com/assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="https://dev.pandawanetwork.com/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="is-visible">
+            <h4>title test share</h4>
+            <p class="article-paragraph">Lorem ipsum dolor sit amet</p>
+            <button class="shareModal-target-link --share">click me</button>
+    </section>
+    <div class="shareOutput">
+        tested <br> html rendered <br> to image <br> images <br>
+        tested <br> html rendered <br> to image <br> images <br>
+        tested <br> html rendered <br> to image <br> images <br>
+        tested<br> html rendered <br> to image <br> images <br>
+        tested<br> html rendered <br> to image <br> images <br>
+        tested<br> html rendered <br> to image <br> images <br>
+        tested<br> html rendered <br> to image <br> images <br>
+        tested<br> html rendered <br> to image <br> images <br>
+        tested<br> html rendered <br> to image <br> images <br>
+        tested<br> html rendered <br> to image <br> images <br>
+        </div>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        const currentUrl = window.location.href;
+        
+            document.querySelector('.shareModal-target-link.--share').addEventListener('click', function () {
+                var output = document.querySelector('.shareOutput')
+                onShare(output)
+            })
+            async function onShare(element) {
+                //  if (!element) {
+                //     return;
+                // }
+                const canvas = await html2canvas(element);
+                const dataUrl = canvas.toDataURL();
+                const blob = await (await fetch(dataUrl)).blob();
+                const filesArray = [new File([blob], 'htmldiv.png', { type: blob.type, lastModified: new Date().getTime() })];
+                // const shareData = {
+                //     files: filesArray,
+                // };
+                // navigator.share(shareData).then(() => {
+                //     console.log('Shared successfully');
+                // });
+                var section = document.querySelector('section.is-visible')
+                var title = section.querySelector('h4').textContent
+                var text = section.querySelector('.article-paragraph').textContent
+
+                let shareData = {
+                    title,
+                    text,
+                    currentUrl,
+                    files: filesArray
+
+                }
+                if (navigator.share) {
+                    navigator.share(shareData).then(() => {
+                        alert('Thanks for sharing!');
+                    }).catch(error => {
+                        alert(error)
+                    })
+                } else {
+                    alert("Your Browser doesn't support Web Share API");
+                }
+            }
+    </script>
+</body>
+</html>

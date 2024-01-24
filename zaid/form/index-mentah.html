@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=800">
+    <title>form</title>
+    <style type="text/css">
+        @font-face {font-family: 'Lusitana';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lusitana/v13/CSR84z9ShvucWzsMKyhdTOIAStt-.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face {font-family: 'Lusitana';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lusitana/v13/CSR74z9ShvucWzsMKyDmafctaNZUvuwl.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCAIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCkIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCIIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCMIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCAIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCkIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCIIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyCMIT4ttDfCmxA.woff2) format('woff2');unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face {font-family: 'Raleway';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/raleway/v28/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+        table {border-collapse: collapse !important;}
+        table td { border-collapse: collapse; vertical-align: top;}
+        body {
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: none;
+        width: 100% !important;
+        margin: 0 !important;
+        height: 100%;
+        border-color: #000;
+        }
+        .font-primary {
+        font-family: Raleway, sans-serif;
+        }
+        .font-secondary {
+        font-family: Lusitana, serif;
+        }
+        h1,h2,h3,h4,h5,h6,p{
+            margin: 0
+        }
+
+        .border-b-\[10px\] {
+        border-bottom-width: 10px;
+        }
+
+        .px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        }
+
+        .px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        }
+
+        .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        }
+
+        .pl-16 {
+        padding-left: 4rem;
+        }
+
+        .pl-6 {
+        padding-left: 1.5rem;
+        }
+
+        .pt-2 {
+        padding-top: 0.5rem;
+        }
+
+        .pt-4 {
+        padding-top: 1rem;
+        }
+
+        .text-center {
+        text-align: center;
+        }
+
+        .text-right {
+        text-align: right;
+        }
+
+        .font-primary {
+        font-family: Raleway, sans-serif;
+        }
+
+        .font-secondary {
+        font-family: Lusitana, serif;
+        }
+
+        .text-4xl {
+        font-size: 18px;
+        }
+
+        .text-5xl {
+        font-size: 20px;
+        }
+
+        .text-base {
+        font-size: 12px;
+        }
+
+        .text-lg {
+        font-size: 14px;
+        }
+
+        .text-sm {
+        font-size: 10px;
+        }
+
+        .text-xl {
+        font-size: 16px;
+        }
+
+        .font-bold {
+        font-weight: 700;
+        }
+
+        .font-normal {
+        font-weight: 400;
+        }
+
+        .font-semibold {
+        font-weight: 600;
+        }
+
+        .underline{
+            text-decoration: underline;
+        }
+
+        .w-20 {
+        width: 5rem;
+        }
+
+        .w-28 {
+        width: 7rem;
+        }
+
+        .w-32 {
+        width: 8rem;
+        }
+
+        .w-52 {
+        width: 13rem;
+        }
+
+        .w-64 {
+        width: 16rem;
+        }
+
+        .w-72 {
+        width: 18rem;
+        }
+        .w-full {
+        width: 100%;
+        }
+        .w-pad{
+            width: 16px
+        }
+        .w-left{
+            width: 300px
+        }
+        .w-left-sm{
+            width: 100px
+        }
+        .w-left-md{
+            width: 200px
+        }
+    </style>
+    </head>
+
+    <body>
+        <table align="center" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td width="100%" valign="top" style="text-align: center; vertical-align:middle;">
+                <center>
+                    <table cellpadding="0" cellspacing="0" width="800" style="border-bottom: 10px double #000;">
+                        <tr>
+                            <td>
+                                <img width="120px" style="padding-left: 1rem;" src="../assets/image/logo.png" alt="">
+                            </td>
+                            <td style="text-align: center;padding: 1rem 0;">
+                                <h1 class="text-xl">YAYASAN ZAID BIN TSABIT PANATARAN</h1>
+                                <h2 class="text-xl font-secondary">SEKOLAH DASAR ISLAM KREATIF</h2>
+                                <h3 class="text-4xl leading-none">ZAID BIN TSABIT</h3>
+                                <h4 class="font-secondary text-xl">NSS / NIS : 102051504043 / 100380NPSN: 20549300</h4>
+                                <h5 class="text-xl">TERAKREDITASI : B</h5>
+                                <h6 class="text-sm font-secondary">Jl. A.Yani RT 01 RW 01, Lingk. Nglegok I Kec. Nglegok Kab. Blitar 66181</h6>
+                                <span class="text-sm">Email : <span style="color: blue; text-decoration: underline">sdi_kreatif_zaidbintsabit@yahoo.co.id</span></span>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" valign="top" style="text-align: center; vertical-align:middle; padding: 1rem 0 0;">
+                <center>
+                    <table cellpadding="0" cellspacing="0" width="800" class="text-lg">
+                        <tr>
+                            <td width="600px">
+                                <h1 class="text-lg text-center font-secondary mb-2"><b>FORMULIR PENDAFTARAN SISWA BARU <br> TAHUN PELAJARAN 2023/2024</b></h1>
+                            </td>
+                            <td width="200px" style="text-align: center;border: 4px solid #000" class="">
+                                <p class="text-lg font-semibold max-w-sm text-center font-secondary">
+                                    <b>No. Pendaftaran: <br>
+                                    <span>2023/09/12/1231</span></b>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" valign="top" style="text-align: center; vertical-align:middle;">
+                <center>
+                    <table cellpadding="0" cellspacing="0" width="800" class="text-lg">
+                        <tr>
+                            <td colspan="4">
+                                <h2 class="text-lg font-bold underline font-secondary mb-2">A. KETERANGAN DIRI SISWA</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>1. Nama Siswa</span>
+                            </td>
+                            <td>
+                                <span>: lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>2. NISN</span>
+                            </td>
+                            <td>
+                                <span>: lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>3. Nama Panggilan</span>
+                            </td>
+                            <td>
+                                <span>: lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>4. Jenis Kelamin</span>
+                            </td>
+                            <td>
+                                <span>: lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>5. NIK (Nomor Induk Keluarga)</span>
+                            </td>
+                            <td>
+                                <span>: 102931029301239</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>6. Tempat , Tanggal lahir</span>
+                            </td>
+                            <td>
+                                <span>: Blitar, 120310</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>7. Agama</span>
+                            </td>
+                            <td>
+                                <span>: lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>8. Kewarganegaraan</span>
+                            </td>
+                            <td>
+                                <span>: lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>9. Jumlah Saudara</span>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>: </td>
+                                        <td>
+                                            <span>a. Kandung</span>
+                                        </td>
+                                        <td>
+                                            <span>: 1</span>
+                                        </td>
+                                        <td class="w-pad"></td>
+                                        <td>
+                                            <span>b. Tiri</span>
+                                        </td>
+                                        <td>
+                                            <span>: 2</span>
+                                        </td>
+                                        <td class="w-pad"></td>
+                                        <td>
+                                            <span>c. Angkat</span>
+                                        </td>
+                                        <td>
+                                            <span>: 3</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>10. Bahasa sehari- hari dalam keluarga</span>
+                            </td>
+                            <td>
+                                <span>: lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>11. Keadaan Jasmani</span>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>: </td>
+                                        <td>
+                                            <span>a. Berat Badan</span>
+                                        </td>
+                                        <td>
+                                            <span>: 11</span>
+                                        </td>
+                                        <td class="w-pad"></td>
+                                        <td>
+                                            <span>c. Golongan darah</span>
+                                        </td>
+                                        <td>
+                                            <span>: O</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <span>b. Tinggi Badan</span>
+                                        </td>
+                                        <td>
+                                            <span>: 123</span>
+                                        </td>
+                                        <td class="w-pad"></td>
+                                        <td>
+                                            <span>d. Penyakit yang pernah diderita</span>
+                                        </td>
+                                        <td>
+                                            <span>: -</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-sm">
+                                <span>12. Alamat</span>
+                            </td>
+                            <td class="w-left-md">
+                                <span>a. Dusun</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-sm"></td>
+                            <td class="w-left-md">
+                                <span>b. RT/RW</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-sm"></td>
+                            <td class="w-left-md">
+                                <span>c. Kelurahan / Desa</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-sm"></td>
+                            <td class="w-left-md">
+                                <span>d. Kecamatan</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-sm"></td>
+                            <td class="w-left-md">
+                                <span>e. Kode Pos</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>13. No yang dapat di hubungi</span>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>: </td>
+                                        <td>
+                                            <span>a. Telp</span>
+                                        </td>
+                                        <td>
+                                            <span>: 0129301923019231</span>
+                                        </td>
+                                        <td class="w-pad"></td>
+                                        <td>
+                                            <span>b. HP</span>
+                                        </td>
+                                        <td>
+                                            <span>: 212039120312930</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>14. Bertempat tinggal di</span>
+                            </td>
+                            <td>
+                                <span>: Orang tua / wali / menumpang/ asrama</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>15. Jarak tempat tinggal dengan sekolah</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>16. Alat Trasportasi ke Sekolah</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>17. Apakah Sebagai Penerima KPS,PKH,KIP</span>
+                            </td>
+                            <td>
+                                <span>: Ya / Tidak</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>18. No KPS,PKH,KIP</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td colspan="9">(*) sertakan kartu KPS (Kartu Perlindungan Sosial), PKH (Program Keluarga Harapan), KIP (Kartu Indonesia Pintar) jika ada</td>
+                        </tr>
+                    </table>
+                </center>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" valign="top" style="text-align: center; vertical-align:middle;">
+                <center>
+                    <table cellpadding="0" cellspacing="0" width="800" class="text-lg">
+                        <tr>
+                            <td colspan="4">
+                                <h2 class="text-lg font-bold underline font-secondary mb-2">B. KETERANGAN ORANG TUA / WALI SISWA</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>1. Nama Orang Tua Kandung</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>a. Nama</span>
+                            </td>
+                            <td class="w-left-sm">
+                                <span>: a. Ayah</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md"></td>
+                            <td class="w-left-sm">
+                                <span>: b. Ibu</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>b. Tempat, Tanggal lahir</span>
+                            </td>
+                            <td class="w-left-sm">
+                                <span>: a. Ayah</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md"></td>
+                            <td class="w-left-sm">
+                                <span>: b. Ibu</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>c. Pendidikan Tertinggi</span>
+                            </td>
+                            <td class="w-left-sm">
+                                <span>: a. Ayah</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md"></td>
+                            <td class="w-left-sm">
+                                <span>: b. Ibu</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>d. Pekerjaan</span>
+                            </td>
+                            <td class="w-left-sm">
+                                <span>: a. Ayah</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left-md"></td>
+                            <td class="w-left-sm">
+                                <span>: b. Ibu</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>2. Wali Siswa ( jika mempunyai )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>a. Nama</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>b. Hubungan Keluarga</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>c. Pendidikan Tertinggi</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>d. Pekerjaan /Jabatan</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>e. Alamat</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" valign="top" style="text-align: center; vertical-align:middle;">
+                <center>
+                    <table cellpadding="0" cellspacing="0" width="800" class="text-lg">
+                        <tr>
+                            <td colspan="4">
+                                <h2 class="text-lg font-bold underline font-secondary mb-2">B. PERKEMBANGAN SISWA</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="3">
+                                <span>1. Pendidikan sebelumnya</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>a. Masuk menjadi siswa baru kelas 1</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>a. Asal Siswa</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>b. Nama Taman Kanak – Kanak</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>c. Alamat</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>d. Tanggal dan Nomor Ijasah</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="2">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>a. Pindahan dari sekolah lain * ( khusus untuk siswa mutasi )</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>a. Nama dan sekolah asal</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>b. Dari Kelas</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>c. Diterima tanggal</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-pad"></td>
+                            <td class="w-left" colspan="1">
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>&nbsp&nbsp&nbsp&nbsp</span>
+                                <span>d. Di kelas</span>
+                            </td>
+                            <td>
+                                <span>: Lorem</span>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" valign="top" style="text-align: center; vertical-align:middle;">
+                <center>
+                    <table cellpadding="0" cellspacing="0" width="800" class="text-lg">
+                        <tr>
+                            <td class="w-left" colspan="3">
+                                <p class="text-right">Blitar, 29 Agustus 2023</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-left" colspan="3">
+                                <p>Mengetahui,</p>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>Kepala SDI Kreatif Zaid Bin Tsabit</td>
+                            <td>Panitia PSB SDI Kreatif Zaid Bin Tsabit</td>
+                            <td>Orang Tua / Wali</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>
+                                <img src="https://picsum.photos/100" alt="">
+                            </td>
+                            <td>
+                                <img src="https://picsum.photos/100" alt="">
+                            </td>
+                            <td>
+                                <img src="https://picsum.photos/100" alt="">
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="underline text-bold">DINA RESNA DEWI, S.Pd</td>
+                            <td class="underline text-bold">SITI MASITHOH, S.Pd</td>
+                            <td class="underline text-bold">Lorem Ipusm DOlor</td>
+                        </tr>
+                    </table>
+                </center>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

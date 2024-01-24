@@ -1,0 +1,262 @@
+\:root
+    --color-primary: #FF2E00
+    --color-primary-opacity: rgba(	255, 46, 0,.3)
+    --color-secondary: #FFB193
+    --color-secondary-opacity: rgba(255, 177, 147,.5)
+    --color-black: #333
+    --color-white: #FFF
+    --header: rgba(0,0,0,.5)
+    --header-white: rgba(255,255,255,.5)
+
+.bg
+    &-secondary
+        &-opacity
+            background-color: var(--color-secondary-opacity)
+    &-primary
+        &-opacity
+            background-color: var(--color-primary-opacity)
+.text-border
+    &.--active
+        position: relative
+        color: var(--color-primary)
+        &::after
+            content: ''
+            border-bottom: 2px solid var(--color-primary)
+            width: 83.3%
+            margin: auto
+            position: absolute
+            inset: 0
+            top: auto
+.text-shadow
+    text-shadow: 3px 3px var(--color-secondary-opacity)
+    &.--hero
+        text-shadow: 2px 2px var(--color-black)
+.header
+    transition: all .3s ease
+    .open-menu
+        svg
+            path
+                transition: all .3s ease
+    &.--home
+        background-color: transparent
+        .open-menu
+            svg
+                path
+                    stroke: var(--color-white)
+    &.--sticky
+        background-color: var(--header)
+        backdrop-filter: blur(5px)
+        .open-menu
+            svg
+                path
+                    stroke: var(--color-white)
+    &_nav
+        &_collapse
+            &_inner
+                transition: all .3s ease
+            .menu
+                &_list
+                    li
+                        @extend .text-border
+.swiper
+    --swiper-pagination-bottom: 3rem
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal
+    left: auto
+    right: 1.25rem
+    width: auto
+    text-align: right
+.swiper-pagination-bullet
+    transition: all .3s ease
+    &-active
+        --swiper-pagination-bullet-width: 1.5rem
+.ornament
+    &--slide
+        background-size: 100% auto
+        -webkit-animation: slide 10s linear infinite
+        animation: slide 10s linear infinite
+    &--rotate
+        -webkit-animation: rotate 100s linear infinite
+        animation: rotate 100s linear infinite
+        &-sm
+            -webkit-animation: rotate 10s linear infinite
+            animation: rotate 10s linear infinite
+            &-invert
+                -webkit-animation: rotate 8s linear infinite reverse
+                animation: rotate 8s linear infinite reverse
+
+@keyframes slide
+    100%
+        background-position: 0 100%
+@-webkit-keyframes slide
+    100%
+        background-position: 0 100%
+@keyframes rotate
+    100%
+        transform: rotate(360deg)
+@-webkit-keyframes rotate
+    100%
+        transform: rotate(360deg)
+.tabs
+    &_content
+        &_item
+            display: none
+            &.--active
+                display: block
+    &_nav
+        &_item
+            @extend .text-border
+            
+.btn
+    &--primary
+        box-shadow: 6px 6px 0px 0px var(--color-secondary)
+        &:hover
+            box-shadow: 0 0 0px 0px var(--color-secondary)
+    &--border
+        &::before
+            content: ''
+            position: absolute
+            border: 2px solid var(--color-secondary)
+            border-radius: .5rem
+            width: calc(100% + .25rem)
+            height: calc(100% + .25rem)
+            left: .25rem
+            top: .25rem
+            z-index: -1
+            transition: all .3s ease
+        &:hover
+            border-color: var(--color-primary)
+            color: var(--color-primary)
+            &::before
+                left: -.125rem
+                top: -.125rem
+.item
+    &:hover
+        .item
+            &_title
+                color: var(--color-primary)
+    &--news
+        .item
+            &_fig
+                box-shadow: 0 0 0 0 var(--color-primary) 
+        &:hover
+            .item
+                &_fig
+                    box-shadow: 4px 4px 0 0 var(--color-primary) 
+    &--event
+        .item
+            &_time
+                &_date,
+                &_month
+                    text-shadow: 0 0 0 0 var(--color-primary)
+        &:hover
+            .item
+                &_time
+                    &_date,
+                    &_month
+                        color: var(--color-primary)
+.breadcrumb
+    li
+        a
+            position: relative
+            font-weight: 600
+            &::after
+                content: ''
+                margin-left: .5rem
+                width: .5rem
+                height: .5rem
+                display: inline-block
+                border-width: 0 2px 2px 0
+                border-style: solid
+                border-color: var(--color-black)
+                transform: rotate(-45deg)
+.article
+    &_text
+        p,figure
+            margin-bottom: 1rem
+        ul,ol
+            padding-left: 1rem
+            list-style-type: disc
+            margin-bottom: 1rem
+            li
+                margin-bottom: .5rem
+
+        ol
+            list-style-type: decimal
+.share
+    position: relative
+    &::after
+        content: 'Link sudah di copy'
+        position: absolute
+        width: 8rem
+        padding: .25rem .5rem
+        border-radius: 6px
+        background: var(--color-primary)
+        opacity: 0
+        transition: all .3s ease
+        pointer-events: none
+        bottom: 50%
+        right: 0
+        margin: auto
+        font-size: 12px
+        color: white
+    &.--copied
+        &::after
+            pointer-events: auto
+            opacity: 1
+            bottom: 100%
+
+.pagination
+    &_nav
+        svg
+            stroke: var(--color-primary)
+        &:hover
+            background-color: var(--color-primary)
+            svg
+                stroke: var(--color-white)
+        &.--disable
+            pointer-events: none
+            opacity: .4
+    &_list
+        -ms-overflow-style: none
+        scrollbar-width: none
+        &::-webkit-scrollbar
+            display: none
+        &_item
+            &.--active,
+            &:hover
+                a
+                    background-color: var(--color-primary)
+                    color: var(--color-white)
+
+@media (max-width: 1024px)
+    #menu:checked~.header_nav_collapse
+        background-color: var(--color-white)
+        .header_nav_collapse_inner
+            right: 0
+        .close-menu
+            display: block
+
+@media (min-width: 640px)
+    .text-shadow.--hero
+        text-shadow: 4px 4px var(--color-black)
+@media (min-width: 768px)
+    .swiper--img
+        margin-right: 0
+    .text-shadow.--hero
+        text-shadow: 3px 3px var(--color-secondary-opacity)
+    .swiper
+        --swiper-pagination-bottom: 1rem
+    .curve
+        &--desktop
+            img
+                height: calc(100% + 2px)
+@media (min-width: 1024px)
+    .section
+        &--hero
+            .overlay
+                background-image: linear-gradient(var(--color-white) 10%, var(--color-black) 30%, var(--color-black) 70%, #000 90%)
+    .header
+        // background-color: transparent
+        &.--sticky
+            background-color: var(--header-white)

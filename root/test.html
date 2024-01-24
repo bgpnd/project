@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" id="btnShare" class="header-share flex items-center justify-center rounded-full h-10 w-10 ">
+        <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.8 16.2458V12.3038C6.796 12.3038 3.502 13.8338 1 17.1998C2.008 12.3938 4.798 7.60581 11.8 6.63381V2.7998L19 9.5138L11.8 16.2458Z" stroke="black" stroke-width="2"/>
+        </svg>
+    </a>
+    <input type="file" accept="image/*" capture="camera">
+    <script>
+        const shareButton = document.getElementById('btnShare');
+
+        shareButton.addEventListener('click', event => {
+            alert(navigator.share);
+            if (navigator.share) { 
+                navigator.share({
+                    title: 'WebShare API Demo',
+                    url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                })
+                .catch(console.error);
+                // } else {
+                //     shareDialog.classList.add('is-open');
+            }
+        });
+    </script>
+</body>
+</html>

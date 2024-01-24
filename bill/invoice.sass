@@ -1,0 +1,113 @@
+$primary: #684EDE
+$border: #cecece
+$black: #333
+$white: #fff
+body
+    color: $black
+.invoice
+    margin: 0
+    &_title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 14px
+        b
+            font-weight: 600
+    &-col
+        margin-bottom: 15px
+        address
+            margin-bottom: 0
+            strong
+                font-size: 16px
+        b
+            width: 40%
+            display: inline-block
+
+.page-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0
+    padding-bottom: 10px
+    border-bottom: 1px solid $border
+    margin-bottom: 15px
+.table
+    margin-bottom: 0
+    &-responsive
+        border-left: 0
+        border-right: 0
+        border-top: 1px solid $border
+        border-bottom: 1px solid $border
+        padding-top: 15px
+        padding-bottom: 15px
+    > thead, 
+    > tbody,
+    > tfoot 
+        > tr 
+            > th,
+            > td
+                border-bottom: 0
+                border-top: 0
+                padding: 0
+                &:last-child
+                    text-align: right
+            >th
+                font-weight: 600
+            >td
+                font-size: 16px
+                font-weight: bold
+.form-metode
+    .lead
+        font-size: 16px
+        font-weight: 600
+    .form-group
+        display: grid
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+        gap: 10px
+
+.btn
+    &--primary
+        background-color: $primary
+        color: $white
+        border-radius: 8px
+        height: 48px
+        min-width: 48px
+        font-size: 16px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        font-weight: 600
+    &-default
+        border-radius: 8px
+        border-width: 2px
+        transition: all .3s ease
+        img
+            width: 100%
+            height: auto
+        &:hover
+            border-color: $primary
+            background-color: $white
+@media screen and ( min-width: 500px  )
+    .form-metode
+        .form-group
+            grid-template-columns: repeat(4, minmax(0, 1fr))
+@media screen and ( min-width: 769px  )
+    .form-metode
+        .form-group
+            grid-template-columns: repeat(5, minmax(0, 1fr))
+@media screen and ( min-width: 1024px  )
+    .invoice
+        display: grid
+        grid-template-areas: 'header header''left right'
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+        gap: 30px
+        &_left
+            grid-area: left
+        &_right
+            grid-area: right
+    .page-header
+        grid-area: header
+    // .form-metode
+    //     .form-group
+    //         grid-template-columns: repeat(6, minmax(0, 1fr))
